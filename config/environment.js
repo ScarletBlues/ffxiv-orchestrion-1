@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'ffxiv-orchestrion',
     environment: environment,
-    baseURL: '/ffxiv/',
+    baseURL: '/ffxiv',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
