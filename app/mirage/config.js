@@ -1,5 +1,9 @@
+import config from 'ember-get-config';
+
 export default function() {
-    this.get('/tracks', function() {
+    this.namespace = config.baseURL;
+
+    this.get('tracks', function() {
         return {
             data: [
                 {id:1,
@@ -145,7 +149,7 @@ export default function() {
                  attributes: {name:"Pa-Paya", source:"Speculated to be from seasonal event"}}
 
             ]
-        }
+        };
     });
 }
 
