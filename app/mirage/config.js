@@ -4,11 +4,12 @@ export default function() {
     this.namespace = config.baseURL;
 
     this.get('tracks', function() {
-        return {
+
+        var data = {
             data: [
                 {id:1,
                  type:'tracks',
-                 attributes: {name:"Prelude - Discoveries", source:"Achievement reward for unlocking 10 songs"}},
+                 attributes: {name:"Prelude - Discoveries", source:"Achievement reward for unlocking 10 songs", isCollected:localStorage.getItem("track-"+this.id) === "true"}},
                 {id:2,
                  type:'tracks',
                  attributes: {name:"Torn from the Heavens", source:"Gold Saucer - 50,000 MGP"}},
@@ -150,6 +151,16 @@ export default function() {
 
             ]
         };
+
+        data.data = data.data.map(function(track){
+            var obj = track;
+            obj["attributes"]["iscollected"] = localStorage.getItem("track-"+track.id) === "true";
+
+            return obj;
+
+        });
+
+        return data;
     });
 }
 

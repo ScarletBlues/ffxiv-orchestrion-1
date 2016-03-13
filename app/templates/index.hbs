@@ -1,21 +1,4 @@
-<table class="table">
-<thead>
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Source</th>
-    </tr>
-</thead>
-<tbody>
-{{#each model as |track|}}
-    <tr>
-        <td>{{track.id}}</td>
-        <td>{{track.name}}</td>
-        <td>{{track.source}}</td>
-    </tr>
-{{/each}}
-</tbody>
-</table>
+{{track-list tracks=model}}
 {{outlet}}
 
 
