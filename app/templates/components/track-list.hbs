@@ -10,7 +10,7 @@
 </thead>
 <tbody>
 {{#each tracks as |track|}}
-    {{track-listing track=track}}
+    {{track-listing track=track collected=track.iscollected}}
 {{/each}}
 </tbody>
 </table>

@@ -90,7 +90,7 @@ export default function() {
                  attributes: {name:"Imagination", type:"Crafted", source:"ALC Lv60 (Master III) - 1x Blank Grade 3 Orchestrion Roll, 1x Enchanted Hardsilver Ink, 1x Faded Copy of Imagination (drops from The Aetherochemical Research Facility)"}},
                 {id:28,
                  type:'tracks',
-                 attributes: {name:"Down the Up Staircase", source:"ALC Lv60 (Master III ★) - 1x Blank Grade 3 Orchestrion Roll, 1x Enchanted Aurum Regis Ink, 1x Faded Copy of Down the Up Staircase (drops from The Antitower)"}},
+                 attributes: {name:"Down the Up Staircase", type:"Crafted", source:"ALC Lv60 (Master III ★) - 1x Blank Grade 3 Orchestrion Roll, 1x Enchanted Aurum Regis Ink, 1x Faded Copy of Down the Up Staircase (drops from The Antitower)"}},
                 {id:29,
                  type:'tracks',
                  attributes: {name:"Ultima", type: "Achievement", source:"Achievement reward for unlocking 30 songs"}},
