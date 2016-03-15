@@ -154,7 +154,7 @@ export default function() {
 
         data.data = data.data.map(function(track){
             var obj = track;
-            obj["attributes"]["iscollected"] = localStorage.getItem("track-"+track.id) === "true";
+            obj["attributes"]["isCollected"] = localStorage.getItem("track-"+track.id) === "true";
 
             return obj;
 
