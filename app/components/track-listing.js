@@ -4,6 +4,10 @@ export default Ember.Component.extend({
     tagName: 'tr',
     classNameBindings: ['collected'],
 
+    numericId: Ember.computed('id', function(){
+       return Number(this.track.id);
+    }),
+
     actions: {
         setIsCollected(event){
             var id = this.track.id;
