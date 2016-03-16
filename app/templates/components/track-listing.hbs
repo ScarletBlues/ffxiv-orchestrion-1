@@ -4,6 +4,12 @@
 <td>{{track.name}}</td>
 <td>{{track.type}}</td>
 <td>{{track.source}}</td>
+<td>
+    <button {{action "previewTrack" this}}>Preview</button>
+    <audio>
+        <source src="ffxiv-{{track.id}}.ogg" type="audio/ogg">
+    </audio>
+</td>
 
 
 {{yield}}

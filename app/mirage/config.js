@@ -147,7 +147,7 @@ export default function() {
                  attributes: {name:"Answers", type:"Crafted", source:"ALC Lv60 (Master IV ★★ Specialist-only) - 1x Blank Grade 3 Orchestrion Roll, 1x Enchanted Aurum Regis Ink, 1x Faded Copy of Thunderer, 1x Faded Copy of Rise of the White Raven, 1x Faded Copy of Answers (drops from FCoB Turn 4)"}},
                 {id:47,
                  type:'tracks',
-                 attributes: {name:"Pa-Paya", type:"Quest", source:"Speculated to be from seasonal event"}}
+                 attributes: {name:"Pa-Paya", type:"Quest", source:"Easter Event"}}
 
             ]
         };
