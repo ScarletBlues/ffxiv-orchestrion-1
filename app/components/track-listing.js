@@ -2,19 +2,19 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
     tagName: 'tr',
+
     classNameBindings: ['collected'],
+
+    init(){
+      this._super();
+      this.get('previews').addTrack(this);
+    },
+
+    previews: Ember.inject.service('music'),
+
+
+
     isPlaying: false,
-    isPlayingChanged: Ember.observer('isPlaying', function(event) {
-
-        this.sendAction('action', this);
-
-
-        $(event.element).parent().find("audio").each(function(idx, track){
-            $(track)[0].pause();
-            $(track)[0].currentTime = 0;
-        });
-        $(event.element).find("audio")[0].play();
-    }),
 
     actions: {
         setIsCollected(event){
@@ -24,8 +24,14 @@ export default Ember.Component.extend({
             localStorage.setItem("track-"+id,checked);
         },
 
-        previewTrack(event){
-            this.sendAction('action', this);
+        previewTrack(track){
+            this.get('previews').play(track);
+            this.set('isPlaying', true);
+        },
+
+        stopTrack(track){
+            this.get('previews').stop(track);
+            this.set('isPlaying', false);
         }
     }
 });

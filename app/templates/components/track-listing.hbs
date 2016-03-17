@@ -2,7 +2,11 @@
 <td><{{input type="checkbox" name="iscollected" checked=track.isCollected change=(action "setIsCollected")}}</td>
 <td>{{track.id}}</td>
 <td>
-    <button {{action "previewTrack" this}}>Preview</button>
+    {{#if isPlaying}}
+        <button {{action "stopTrack" this}}>Stop</button>
+    {{else}}
+        <button {{action "previewTrack" this}}>Preview</button>
+    {{/if}}
     <audio>
         <source src="ffxiv-{{track.id}}.ogg" type="audio/ogg">
         <source src="ffxiv-{{track.id}}.mp3" type="audio/mp3">
