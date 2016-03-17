@@ -16,3 +16,4 @@
 npm-debug.log
 testem.log
 /public/*.ogg
+/public/*.mp3
