@@ -10,9 +10,14 @@ export default Ember.Component.extend({
       this.get('previews').addTrack(this);
     },
 
+    didRender(){
+        var self = this;
+        this.element.getElementsByTagName("audio")[0].addEventListener('ended', function() {
+            self.set('isPlaying',false);
+        });
+    },
+
     previews: Ember.inject.service('music'),
-
-
 
     isPlaying: false,
 
