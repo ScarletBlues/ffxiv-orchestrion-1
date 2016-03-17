@@ -1,9 +1,6 @@
 
 <td><{{input type="checkbox" name="iscollected" checked=track.isCollected change=(action "setIsCollected")}}</td>
 <td>{{track.id}}</td>
-<td>{{track.name}}</td>
-<td>{{track.type}}</td>
-<td>{{track.source}}</td>
 <td>
     <button {{action "previewTrack" this}}>Preview</button>
     <audio>
@@ -11,6 +8,7 @@
         <source src="ffxiv-{{track.id}}.mp3" type="audio/mp3">
     </audio>
 </td>
-
-
+<td>{{track.name}}</td>
+<td>{{track.type}}</td>
+<td>{{track.source}}</td>
 {{yield}}
