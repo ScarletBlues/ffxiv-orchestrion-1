@@ -21,4 +21,4 @@ This is the open source code for my Final Fantasy XIV orchestrion scroll tracker
 5. Run ```ember build``` to build the app
 6. Configure your web server of choice to point to ```dist/index.html```
 
-This app is currently being hosted at [www.jonathanlorenc.com/ffxiv](www.jonathanlorenc.com/ffxiv).
+This app is currently being hosted at [www.jonathanlorenc.com/ffxiv](http://www.jonathanlorenc.com/ffxiv).
